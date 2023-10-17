@@ -1,0 +1,11 @@
+.mainTitleColor {
+    color: darkgray;
+}
+
+.mainTitleFont {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
