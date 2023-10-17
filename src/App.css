@@ -1,0 +1,14 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+.mainContainer {
+    background-color: #242526;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    padding: 10%;
+}

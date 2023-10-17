@@ -1,0 +1,9 @@
+.secondaryTextColor {
+    color: dimgray;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+}
+
+.spaced-out {
+    margin-bottom: 5%;
+}

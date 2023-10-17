@@ -2,6 +2,9 @@ import { useState } from "react";
 import Alert from "./Components/Alert";
 import Button from "./Components/Button";
 import ListGroup from "./Components/Listgroup";
+import data from "./assets/data.json";
+import "./App.css";
+import Title from "./Components/Title";
 
 function App() {
   const [showAlert, setShowAlert] = useState(false);
@@ -13,10 +16,14 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="mainContainer">
+      <Title color="mainTitleColor" >
+        {data.constrcutionPlaceHolder}
+        <div className="spinner-border text-success" role="status"></div>
+      </Title>
       <ListGroup
         items={items}
-        heading="Hobbies"
+        heading="In the meantime, I am also doing these things"
         onSelectItem={handleSelectitem}
       />
       {showAlert && (

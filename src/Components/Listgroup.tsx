@@ -1,8 +1,9 @@
 import { MouseEvent, useState } from "react";
+import "./ListGroup.css";
 
 interface ListGroupProps {
   items: string[];
-  heading: string;
+  heading?: string;
   onSelectItem: (item: string) => void;
 }
 
@@ -14,8 +15,8 @@ function ListGroup({ items, heading, onSelectItem }: ListGroupProps) {
   const handleClick = (e: MouseEvent) => console.log(e);
 
   return (
-    <>
-      <h1>{heading}</h1>
+    <div className="spaced-out">
+      {heading && (<h2 className="secondaryTextColor">{heading}</h2>)}
       {items.length === 0 && <p>No items</p>}
       <ul className="list-group">
         {items.map((item, index) => (
@@ -35,7 +36,7 @@ function ListGroup({ items, heading, onSelectItem }: ListGroupProps) {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 }
 
