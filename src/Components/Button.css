@@ -2,6 +2,7 @@
 button {
     width: 50%;
     align-self: center;
+    margin-bottom: 10%;
 }
 
 /* Small devices such as large phones (640px and up) */

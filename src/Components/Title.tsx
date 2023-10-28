@@ -6,8 +6,6 @@ interface TitleProps {
     color: string;
 }
 
-
-
 const Title = ({children, color}: TitleProps) => {
   return (
     <div className={color + " mainTitleFont"}>{children}</div>
