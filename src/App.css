@@ -4,12 +4,13 @@ body,
   height: 100%;
   margin: 0;
   background-color: #242526;
+  min-width: 370px;
 }
 
 .mainContainer {
-    background-color: #242526;
-    display: flex;
-    flex-flow: column;
-    height: 100%;
-    padding: 10%;
+  background-color: #242526;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  padding: 5%;
 }

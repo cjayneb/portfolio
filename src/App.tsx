@@ -5,7 +5,7 @@ import ListGroup from "./Components/Listgroup";
 import data from "./assets/data.json";
 import "./App.css";
 import Title from "./Components/Title";
-import FlappyBird from "./Components/FlappyBird";
+import FlappyBird from "./Components/FlappyBird/FlappyBird";
 
 function App() {
   const [showAlert, setShowAlert] = useState(false);
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="mainContainer">
-      <Title color="mainTitleColor" >
+      <Title color="mainTitleColor">
         {data.constrcutionPlaceHolder}
         <div className="spinner-border text-success" role="status"></div>
       </Title>
@@ -35,7 +35,7 @@ function App() {
       <Button color="primary" onClick={() => setShowAlert(true)}>
         press s mmememmememee
       </Button>
-      <FlappyBird/>
+      <FlappyBird />
     </div>
   );
 }

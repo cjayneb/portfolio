@@ -1,0 +1,28 @@
+.pipe {
+  width: 20px;
+  background-color: green;
+  animation-duration: 8s;
+  animation-name: move;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  position: absolute;
+}
+
+.pipeTop {
+  vertical-align: top;
+}
+
+.pipeBottom {
+  vertical-align: bottom;
+  bottom: 0;
+}
+
+@keyframes move {
+  from {
+    margin-left: 97%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
