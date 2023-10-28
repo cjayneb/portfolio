@@ -11,6 +11,6 @@ body,
   background-color: #242526;
   display: flex;
   flex-flow: column;
-  height: 100%;
+  height: auto;
   padding: 5%;
 }
