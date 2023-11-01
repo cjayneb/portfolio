@@ -1,10 +1,6 @@
 .pipe {
-  width: 20px;
   background-color: green;
-  animation-duration: 8s;
-  animation-name: move;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
+  animation: move 8s linear 1;
   position: absolute;
 }
 
@@ -17,12 +13,98 @@
   bottom: 0;
 }
 
-@keyframes move {
-  from {
-    margin-left: 97%;
+@keyframes moveSmall {
+  0% {
+    width: 0px;
+    margin-left: 100%;
   }
 
-  to {
+  14% {
+    width: 35px;
+  }
+
+  96% {
+    width: 35px;
+  }
+
+  100% {
+    width: 0px;
     margin-left: 0%;
+  }
+}
+
+@keyframes moveMedium {
+  0% {
+    width: 0px;
+    margin-left: 100%;
+  }
+
+  6% {
+    width: 35px;
+  }
+
+  96% {
+    width: 35px;
+  }
+
+  100% {
+    width: 0px;
+    margin-left: 0%;
+  }
+}
+
+@keyframes moveLarge {
+  0% {
+    width: 0px;
+    margin-left: 100%;
+  }
+
+  3% {
+    width: 35px;
+  }
+
+  96% {
+    width: 35px;
+  }
+
+  100% {
+    width: 0px;
+    margin-left: 0%;
+  }
+}
+
+/* Small devices such as large phones (640px and up) */
+@media only screen and (max-width: 44em) {
+  .pipe {
+    animation: moveSmall 8s linear 1;
+    background-color: green;
+    position: absolute;
+  }
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 44em) {
+  .pipe {
+    animation: moveMedium 8s linear 1;
+    background-color: green;
+    position: absolute;
+  }
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 64em) {
+  .pipe {
+    animation: moveMedium 8s linear 1;
+    background-color: green;
+    position: absolute;
+  }
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 90em) {
+  .pipe {
+    animation: moveLarge 8s linear 1;
+    background-color: green;
+    position: absolute;
   }
 }

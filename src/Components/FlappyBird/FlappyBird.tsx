@@ -8,19 +8,29 @@ let nextPipeId = 0;
 let numOfPipesOnScreen = 4;
 
 const FlappyBird = () => {
+  const [gameStarted, setGameStarted] = useState(0);
+  const [pipes, setPipes] = useState([] as any);
+
+  const pageWidth = document.documentElement.scrollWidth;
+  const pageHeight = document.documentElement.scrollHeight;
+  let delay = 0;
+  if (pipes.length > 0) {
+    delay = 2000;
+    if (pageWidth <= 700) {
+      delay = 4000;
+    }
+    console.log(pageWidth);
+  }
   useEffect(() => {
     const intervalGenerate = setInterval(() => {
       if (gameStarted > 0) {
         generatePipes();
       }
-    }, 2000);
+    }, delay);
     return () => {
       clearInterval(intervalGenerate);
     };
   });
-
-  const [gameStarted, setGameStarted] = useState(0);
-  const [pipes, setPipes] = useState([] as any);
 
   const handleClick = () => {
     console.log(gameStarted);
