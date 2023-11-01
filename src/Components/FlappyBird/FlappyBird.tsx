@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./FlappyBird.css";
 import Pipe from "./Pipe";
+import FlappyBirdPlayer from "./FlappyBirdPlayer";
 
 interface FlappyBirdProps {}
 
@@ -34,7 +35,6 @@ const FlappyBird = () => {
 
   const handleClick = () => {
     console.log(gameStarted);
-    pipes.pop();
   };
 
   const generatePipes = () => {
@@ -68,6 +68,7 @@ const FlappyBird = () => {
         handleClick();
       }}
     >
+      <FlappyBirdPlayer></FlappyBirdPlayer>
       {gameStarted > 0 &&
         pipes.map((pipe: any, index: any) => (
           <Pipe key={pipe.id} hT={pipe.heightT} hB={pipe.heightB} />

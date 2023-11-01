@@ -1,7 +1,8 @@
 import React from "react";
+import "./FlappyBirdPlayer.css";
 
 const FlappyBirdPlayer = () => {
-  return <div>FlappyBirdPlayer</div>;
+  return <div className="player"></div>;
 };
 
 export default FlappyBirdPlayer;
